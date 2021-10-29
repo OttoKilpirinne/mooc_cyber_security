@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <div class="row">
+    <form method="get" action="">
+        <input type="date" name="start_date" />
+        <input type="date" name="end_date" />
+        <input type="submit" value="Search date range" />
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Created</th>
+            <th>Updated</th>
+            <th>Status</th>
+          <tr>
+        </thead>
+        <tbody>
+        {% for item in model_items %}
+          <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.created_on }}</td>
+            <td>{{ item.updated_on }}</td>
+            <td>{{ item.status }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+  </div>
+</div>
+
+{% endblock content %}

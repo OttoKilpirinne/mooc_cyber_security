@@ -1,0 +1,2 @@
+###### Requirements with Version Specifiers ######
+lorem-text == 1.5             # Version Matching. Must be version 1.5
